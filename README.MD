@@ -20,9 +20,9 @@ Check Java version to see if installation was successfull: `java -version`
 `adduser <username>`  
 `usermod -a -G sudo <username>`  
 
-In the new user directory create a new directory called root. This is where the application jar will be added.  
+In the new user directory create a new directory called `root`. This is where the application jar will be added.  
 
-## Create an service to start the application
+## Create a service to start the application
 
 In `/etc/systemd/system/` create a `<myservice>.service` file and add the following.  
 
@@ -71,7 +71,7 @@ After creating the file run the following command `ln -s /etc/nginx/sites-availa
 Now run `systemctl restart nginx` to restart nginx for the above to take affect.  
 
 ## Deploy
-Build the spring boot jar file and upload it to: `/home/<username>/root/`  
+Build the spring boot jar file, name it `app.jar` and upload it to: `/home/<username>/root/`  
 
 Start the service we created to run the app by running: `systemctl start <myservice>`  
 
